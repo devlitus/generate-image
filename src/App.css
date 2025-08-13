@@ -66,7 +66,6 @@ body {
 
 .app-header {
   padding: 1.5rem 2rem;
-  border-bottom: 1px solid var(--border);
   background-color: rgba(248, 250, 252, 0.8);
   backdrop-filter: blur(10px);
   position: sticky;
@@ -101,7 +100,6 @@ body {
 
 .theme-toggle {
   background: var(--bg-tertiary);
-  border: 1px solid var(--border);
   color: var(--text-secondary);
   padding: 0.5rem;
   border-radius: var(--border-radius);
@@ -110,6 +108,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 
 .theme-toggle:hover {
@@ -145,7 +144,6 @@ body {
 /* Panel de Configuraciones Avanzadas */
 .settings-panel {
   background: var(--bg-secondary);
-  border: 1px solid var(--border);
   border-radius: var(--border-radius-lg);
   padding: 1.5rem;
 }
@@ -186,19 +184,18 @@ body {
 
 .setting-input-inline {
   padding: 0.5rem;
-  border: 1px solid var(--border);
   border-radius: var(--border-radius);
   background: var(--bg-primary);
   color: var(--text-primary);
   font-size: 0.875rem;
   transition: var(--transition);
   width: 100%;
+  border: none;
 }
 
 .setting-input-inline:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
 }
 
 .setting-input-inline:disabled {
@@ -209,7 +206,6 @@ body {
 /* Sección de Prompt */
 .prompt-section {
   background: var(--bg-secondary);
-  border: 1px solid var(--border);
   border-radius: var(--border-radius-lg);
   padding: 1.5rem;
   flex: 1;
@@ -231,10 +227,73 @@ body {
   flex: 1;
 }
 
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.generate-btn {
+  flex: 1;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 160px;
+}
+
+.generate-btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.clear-btn {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border: none;
+}
+
+.clear-btn:hover:not(:disabled) {
+  background: var(--error);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.clear-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .prompt-input {
   width: 100%;
   padding: 1rem;
-  border: 1px solid var(--border);
   border-radius: var(--border-radius);
   background: var(--bg-primary);
   color: var(--text-primary);
@@ -245,12 +304,12 @@ body {
   transition: var(--transition);
   font-family: inherit;
   flex: 1;
+  border: none;
 }
 
 .prompt-input:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
 }
 
 .prompt-input::placeholder {
@@ -268,7 +327,6 @@ body {
   align-items: center;
   justify-content: center;
   background: var(--bg-secondary);
-  border: 1px solid var(--border);
   border-radius: var(--border-radius-lg);
   padding: 2rem;
   min-height: 500px;
@@ -317,36 +375,6 @@ body {
   cursor: not-allowed;
 }
 
-.generate-btn {
-  align-self: flex-start;
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-width: 160px;
-  justify-content: center;
-}
-
-.generate-btn:hover:not(:disabled) {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-.generate-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
-}
-
 .btn-icon {
   flex-shrink: 0;
 }
@@ -369,7 +397,6 @@ body {
   color: var(--error);
   padding: 1rem;
   border-radius: var(--border-radius);
-  border: 1px solid var(--error);
   font-size: 0.875rem;
 }
 
@@ -447,7 +474,6 @@ body {
   padding: 0.75rem;
   background: var(--bg-primary);
   border-radius: var(--border-radius);
-  border: 1px solid var(--border);
   font-size: 0.875rem;
   line-height: 1.4;
 }
@@ -537,6 +563,14 @@ body {
   
   .generate-btn {
     align-self: stretch;
+  }
+  
+  .button-group {
+    flex-direction: row;
+  }
+  
+  .clear-btn {
+    padding: 1rem;
   }
 }
 

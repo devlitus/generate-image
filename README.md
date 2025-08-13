@@ -1,3 +1,82 @@
+# Generador de Imágenes AI
+
+Generador de imágenes minimalista, intuitivo y con modo oscuro, construido con React + Vite. Permite generar imágenes usando modelos de Hugging Face y ajustar parámetros avanzados de generación.
+
+## 🚀 Características
+
+- **UI minimalista y moderna**
+- **Modo oscuro/claro**
+- **Responsive**: se adapta a cualquier dispositivo
+- **Panel de opciones avanzadas**: ancho, alto, pasos de inferencia, escala de guía
+- **Textarea para prompt**
+- **Visualización y descarga de la imagen generada**
+- **Integración con Hugging Face API**
+
+## 🖥️ Vista de la aplicación
+
+- Panel izquierdo: opciones avanzadas y prompt
+- Panel derecho: imagen generada
+
+## ⚡ Instalación y uso
+
+1. Clona el repositorio:
+   ```bash
+   git clone <url-del-repo>
+   cd generate_image
+   ```
+2. Instala dependencias:
+   ```bash
+   npm install
+   ```
+3. Crea un archivo `.env` en la raíz con tu API key de Hugging Face:
+   ```env
+   VITE_API_KEY="tu_api_key_de_huggingface"
+   ```
+4. Inicia la app:
+   ```bash
+   npm run dev
+   ```
+5. Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
+
+## 🛠️ Personalización
+
+- Puedes cambiar el modelo de Hugging Face en `src/services/imageService.ts`.
+- Los parámetros avanzados se pueden ajustar desde la UI.
+
+## 📦 Estructura del proyecto
+
+```
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   └── AdvancedSettings.tsx
+│   ├── services/
+│   │   └── imageService.ts
+│   ├── App.tsx
+│   ├── App.css
+│   ├── main.tsx
+│   └── index.css
+├── .env
+├── package.json
+├── vite.config.ts
+└── README.md
+```
+
+## 🧑‍💻 Tecnologías
+- React 19
+- Vite
+- TypeScript
+- Hugging Face API
+- Lucide React (iconos)
+
+## 📄 Licencia
+MIT
+
+---
+
+Hecho con ❤️ por tu equipo de desarrollo.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
