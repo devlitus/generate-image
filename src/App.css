@@ -324,11 +324,9 @@ body {
 /* Panel Derecho - Resultado */
 .right-panel {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  background: var(--bg-secondary);
   border-radius: var(--border-radius-lg);
-  padding: 2rem;
   min-height: 500px;
 }
 
@@ -422,7 +420,6 @@ body {
 }
 
 .image-container {
-  position: relative;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -456,10 +453,6 @@ body {
   align-items: center;
   justify-content: center;
   opacity: 0;
-}
-
-.image-container:hover .download-btn {
-  opacity: 1;
 }
 
 .download-btn:hover {
@@ -548,11 +541,6 @@ body {
     order: 1;
   }
   
-  .right-panel {
-    order: 2;
-    min-height: 400px;
-  }
-  
   .settings-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -587,11 +575,6 @@ body {
   .settings-panel,
   .prompt-section {
     padding: 1rem;
-  }
-  
-  .right-panel {
-    padding: 1rem;
-    min-height: 300px;
   }
   
   .prompt-input {
