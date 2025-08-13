@@ -6,7 +6,8 @@ import PromptInput from './components/PromptInput'
 import { ImageResult } from './components/ImageResult'
 import { useImageGeneration } from './hooks/useImageGeneration'
 import { useTheme } from './hooks/useTheme'
-import './App.css'
+import './styles/globals.css'
+import './styles/App.css'
 
 function App() {
   const [prompt, setPrompt] = useState('')

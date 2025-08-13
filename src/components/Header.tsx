@@ -1,4 +1,5 @@
-import { Sparkles, Moon, Sun } from 'lucide-react'
+import { Sun, Moon, Sparkles } from 'lucide-react'
+import '../styles/components/Header.css'
 
 interface HeaderProps {
   darkMode: boolean

@@ -1,0 +1,68 @@
+/* Layout principal de la aplicación */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.app-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Layout de dos columnas */
+.main-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+  height: 100%;
+  min-height: 600px;
+}
+
+/* Panel Izquierdo - Controles */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: fit-content;
+}
+
+/* Panel Derecho - Resultado */
+.right-panel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 350px 1fr;
+    gap: 1.5rem;
+  }
+  
+  .app-main {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .app-main {
+    padding: 1rem;
+    height: auto;
+  }
+  
+  .left-panel {
+    order: 2;
+  }
+  
+  .right-panel {
+    order: 1;
+    min-height: 300px;
+  }
+}

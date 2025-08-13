@@ -1,5 +1,6 @@
 import { Settings } from 'lucide-react'
 import type { AdvancedImageSettings } from '../services/imageService'
+import '../styles/components/AdvancedSettings.css'
 
 interface AdvancedSettingsInlineProps {
   settings: Partial<AdvancedImageSettings>

@@ -1,4 +1,5 @@
 import { Sparkles, Loader2 } from 'lucide-react'
+import '../styles/components/PromptInput.css'
 
 interface PromptInputProps {
   prompt: string
