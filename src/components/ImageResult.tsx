@@ -1,4 +1,4 @@
-import { Download, Loader2, Sparkles } from 'lucide-react'
+import { Download, Sparkles } from 'lucide-react'
 import type { GeneratedImage } from '../types'
 
 interface ImageResultProps {
@@ -11,7 +11,6 @@ export function ImageResult({ image, isLoading, onDownload }: ImageResultProps) 
   if (isLoading) {
     return (
       <div className="placeholder">
-        <Loader2 className="animate-spin placeholder-icon" />
         <p>Generando imagen...</p>
         <small>Esto puede tomar unos momentos</small>
       </div>

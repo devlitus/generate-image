@@ -474,6 +474,7 @@ body {
 /* Placeholder */
 .placeholder {
   text-align: center;
+  justify-content: center;
   color: var(--text-muted);
   display: flex;
   flex-direction: column;
