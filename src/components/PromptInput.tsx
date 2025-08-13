@@ -1,4 +1,4 @@
-import { Sparkles, Loader2 } from 'lucide-react'
+import { Sparkles, Loader2, AlertCircle } from 'lucide-react'
 import '../styles/components/PromptInput.css'
 
 interface PromptInputProps {
@@ -73,6 +73,7 @@ export default function PromptInput({
       
       {error && (
         <div className="error-message">
+          <AlertCircle size={16} />
           {error}
         </div>
       )}
