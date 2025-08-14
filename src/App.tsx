@@ -30,7 +30,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className="app" >
       <Header darkMode={darkMode} onToggleTheme={toggleTheme} />
 
       <main className="app-main">
